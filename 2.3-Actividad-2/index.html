@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE = edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Dinamico con MENu</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.js"></script>
+    
+</head>
+<body>
+    <script src="javascript/main.js" type="text/javascript"></script>
+    <div class="nav">
+      <ul class="lista sidebar">
+            <li class="btn_lista">
+                <a href="javascript:abrir" class="nav_link" onclick="inicio()">Inicio</a>
+            </li>
+            <li class="btn_lista">
+                <a  class="nav_link" onclick="showForm()">Formulario</a>
+            </li>
+        </ul>
+        <div class="f-grow">
+            <button id="toggle-menu" onclick="toggleMenu()">
+                <img src="imagenes/1237838.png" />
+            </button>
+            <div>
+                <form class="form" id="formulario">
+                    <input class="control" type="text" name="Nombre" id="nombre" placeholder="Nombre">
+                    <input class="control" type="text" name="Apellidos" id="apellido" placeholder="Apellido">
+                    <input class="control" type="email" name="Correo" id="correo" placeholder="Correo"><br>
+                    <input class="btnguardar" type="button" value="Guardar" onclick="addItem()">
+                </form>
+            </div>
+                <div class="form2" id="table">
+                    <table id="formulario2">
+                    <thead>
+                        <tr>
+                            <th class="tr-head">Nombre</th>
+                            <th  class="tr-head">Apellido</th>
+                            <th  class="tr-head">Correo</th>
+                            <th  class="tr-head">Opt</th>
+                        </tr>
+
+                    </thead>
+                    <tbody id="item-list">
+                    </tbody>
+                </table>
+                </div>
+                <div class="Ventana" id="abrirventana">
+                    <div class="content">
+                        <p>Bienvenido al mundo WEB</p>
+                        <div id="cerrar">
+                            <button onclick="cerrar()"> <img src="imagenes/error.png"> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="saludar">
+                    <input class="btnsaludar" type="button" value="Saludar" onclick="mostrar();" id="btsaludo">
+                           
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!-- <div class="imagen">
+        <img src="imagenes/1237838.png">
+    </div> -->
+</body>
+
+</html>
